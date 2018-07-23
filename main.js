@@ -1,47 +1,43 @@
-var currentPage = 1;
+var currentPage = 0;
 var answers = [];
 
-/*
-//When any button of the answer div is clicked, add the specific click's text to the answer array
 
-$('.answers').click(function() {
-	answers += (event.target.firstChild.nodeValue) + ", ";
-	console.log(answers);
 
-	if (currentPage == 1) {
+function nextPage(npage) {
 
-	currentPage = currentPage + 1;
-	changePage(currentPage);
-	console.log(currentPage);
-	}
+    if (currentPage < dataPack.length) {
+    //checks if the current page's number isn't succeeding of the package's array count
 
-	else if (currentPage == 2) {
+        var optionText = document.createElement('div');
+        var questionTitle = document.createElement('h1');
+        questionTitle.classList.add('title');
+        questionTitle.innerHTML = dataPack[npage].question;
+        Object.entries(dataPack[npage].options).forEach(function(ele) {
+            var buttonText = document.createElement('button')
 
-	currentPage = currentPage + 1;
-	changePage(currentPage);
-	console.log(currentPage);
-	}
+            buttonText.innerHTML = ele[1]
+            buttonText.dataset.key = ele[0]
+            optionText.appendChild(buttonText)
+        });
+        var answerSection = document.querySelector("#slide1")
+        $(answerSection).empty()
+        answerSection.appendChild(questionTitle)
+        //answerSection.innerHTML = ''; //Quickly cleans the HTML content inside the slide
+        answerSection.appendChild(optionText)
+        optionText.addEventListener('click', function(event) {
+            answers.push([event.target.dataset.key, event.target.innerHTML])
+            console.log(answers)
+            currentPage++
+            nextPage(currentPage)
+        });
 
-}); */
-
-function nextPage(npage){
-	var buttonel = document.createElement('div');
-	Object.entries(dataPack[npage]).forEach(function(ele){
-		var buttonText = document.createElement('button')
-		buttonText.innerHTML = ele[1]
-		buttonel.appendChild(buttonText)
-	});
-	var answerSection = document.querySelector("#slide1")
-	answerSection.innerHTML = ''; //Quickly cleans the HTML content inside the slide
-	answerSection.appendChild(buttonel)
-	answerSection.addEventListener('click', function(event) {
-		console.log(event.target.firstChild.nodeValue);
-		answers += (event.target.firstChild.nodeValue) + ", ";
-		currentPage = currentPage + 1
-		nextPage(currentPage)
-	});
+    } else {
+        var answerSection = document.querySelector("#slide1")
+        $(answerSection).empty()
+    	answerSection.innerHTML = " HEHEHHEEHHEHEHx"
+    }
 };
 
-$(document).ready(function(){
-	nextPage(1);
+$(document).ready(function() {
+    nextPage(0);
 });

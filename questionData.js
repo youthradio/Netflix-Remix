@@ -9,18 +9,24 @@ var funFactGender = {"fact1":"Lorem ipsum dolor sit amet, consectetuer adipiscin
 var dataPack = [
 
 {"question":"What’s your favorite type of movie?",
-"one":"Action", 
-"two":"Comedy", 
-"three":"Romance"},
-	
+options: {
+	"one":"Action", 
+	"two":"Comedy", 
+	"three":"Romance"
+}},
 {"question":"Should the lead be…",
-"one":"Female", 
-"two":"Male", 
-"three":"Nonbinary"},
+options: {
+	"one":"Female", 
+	"two":"Male", 
+	"three":"Nonbinary"
+}},
 
-{"question":"And looks like…",
-"one":"Black", 
-"two":"Latino", 
-"three":"Asian"},
+{
+"question":"And looks like…",
+options:{
+	"one":"Black", 
+	"two":"Latino", 
+	"three":"Asian"
+}},
 
 ]
