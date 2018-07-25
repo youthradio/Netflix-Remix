@@ -51,6 +51,8 @@ function nextPage(npage) {
     var answerSection = document.querySelector("#slide1")
     $(answerSection).empty()
     if (response.length) {
+      var movieDesc = response
+      console.log(movieDesc)
       answerSection.innerHTML = JSON.stringify(response)
     } else {
       answerSection.innerHTML = "No movies!!"
