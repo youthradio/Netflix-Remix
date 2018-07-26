@@ -3,6 +3,7 @@ var answers = [];
 
 
 
+
 function nextPage(npage) {
 
   if (currentPage < dataPack.length) {
@@ -51,9 +52,14 @@ function nextPage(npage) {
     var answerSection = document.querySelector("#slide1")
     $(answerSection).empty()
     if (response.length) {
-      var movieDesc = response
+
+      var movieTitle = JSON.stringify(response, ["name"])
+      var movieDesc = JSON.stringify(response, ["description"])
+
       console.log(movieDesc)
-      answerSection.innerHTML = JSON.stringify(response)
+
+      $('#title').text(movieTitle)
+      $('#description-1').text(movieDesc)
     } else {
       answerSection.innerHTML = "No movies!!"
     }
