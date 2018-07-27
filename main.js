@@ -2,8 +2,6 @@ var currentPage = 0;
 var answers = [];
 
 
-
-
 function nextPage(npage) {
 
   if (currentPage < dataPack.length) {
@@ -53,10 +51,12 @@ function nextPage(npage) {
     $(answerSection).empty()
     if (response.length) {
 
-      var movieTitle = JSON.stringify(response, ["name"])
-      var movieDesc = JSON.stringify(response, ["description"])
+      var movieTitle = JSON.stringify(response, ["name"]).replace(/[{":"}]/g, "").replace("name", "").replace(/]|[[]/g, '')
+      var movieDesc = JSON.stringify(response, ["description"]).replace(/[{":"}]/g, "").replace("description", "").replace(/]|[[]/g, '')
+      var movieURL = JSON.stringify(response, ["video"]).replace(/[{""}]/g, "").replace("video", "").replace(/]|[[]/g, '')
+      //separates the name and description keys in the response array and filters out the object's leftovers
 
-      console.log(movieDesc)
+      console.log(movieURL)
 
       $('#title').text(movieTitle)
       $('#description-1').text(movieDesc)
