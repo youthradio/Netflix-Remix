@@ -55,6 +55,7 @@ function nextPage(npage) {
       var movieDesc = JSON.stringify(response, ["description"]).replace(/[{":"}]/g, "").replace("description", "").replace(/]|[[]/g, '')
       var movieURL = JSON.stringify(response, ["video"]).replace(/[{""}]/g, "").replace("video", "").replace(/]|[[]/g, '')
       //separates the name and description keys in the response array and filters out the object's leftovers
+      //movieURL needs the colon removed before the actual URL
 
       console.log(movieURL)
 
