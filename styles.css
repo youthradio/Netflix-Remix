@@ -1,15 +1,74 @@
-body{
-  background-color:#ffffff;
-}
+
+
 .try{
   height: 80vw;
   background-color: grey;
   border-radius: 50%;
+  width:40%;
 }
 .set{
   color:#4A4A4A;
 }
 .yr{
-  height:90px;
-  width: 45%;
+  max-height:50px ;
+
+}
+.box{
+  height: 300px;
+  background-color:grey;
+  padding-right: 25px;
+}
+.projecttitle {
+  background:black;
+}
+.font{
+  font-family: Alegreya Sans;
+  font-style: bold;
+}
+.circle {
+  position: relative;
+  border: 1px solid black;
+  padding: 0;
+  margin: 1em auto;
+  width: 430px;
+  height: 430px;
+  border-radius: 50%;
+  list-style: none;
+  overflow: hidden;
+}
+li {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 55%;
+  height: 55%;
+  transform-origin: 0% 100%;
+}
+.text {
+  position: absolute;
+  left: -100%;
+  width: 200%;
+  height: 200%;
+  text-align: center;
+  transform: skewY(-0deg) rotate(40deg);
+  padding-top: 20px;
+}
+li:first-child {
+  transform: rotate(-10deg) skewY(-10deg);
+}
+li:nth-child(2) {
+  transform: rotate(215deg) skewY(20deg);
+}
+li:nth-child(3) {
+  transform: rotate(400deg) skewY(-2deg);
+}
+li:first-child .text {
+  background: green;
+}
+li:nth-child(2) .text {
+  background: tomato;
+}
+li:nth-child(3) .text {
+  background: aqua;
 }
