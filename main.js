@@ -2,32 +2,59 @@ var currentPage = 0;
 var answers = [];
 
 
+function drawCircle(data){
+  
+  document.querySelectorAll('.box-2').forEach((ele,index) => {
+
+    const width = ele.getBoundingClientRect().width
+    ele.innerHTML = data[index]
+
+    //apply for each elemente the transformation 
+    //move box to center, elemente box width/2 and move upwards -25vh 
+    //index counts from 0, 2 and step 120deg 
+
+    ele.style.transform = `translate(${-width/2}px, -25vh)rotate(${index*120}deg)` 
+
+  })
+  
+}
+
 function nextPage(npage) {
 
   if (currentPage < dataPack.length) {
     //checks if the current page's number isn't succeeding of the package's array count
+    // var buttonKey = document.querySelector(".box-2")
+    // $(buttonKey).empty()
 
-    var optionText = document.createElement('div');
-    var questionTitle = document.createElement('h1');
-    questionTitle.classList.add('title');
+    var questionTitle = document.querySelector("#question-title");
+    // questionTitle.classList.add('title');
     questionTitle.innerHTML = dataPack[npage].question;
-    Object.entries(dataPack[npage].options).forEach(function(ele) {
-      var buttonText = document.createElement('button')
-      buttonText.classList.add('deg120')
-      buttonText.innerHTML = ele[1]
-      buttonText.dataset.key = ele[0]
-      optionText.appendChild(buttonText)
+    var answerSection = document.querySelector(".answer-container");
+    //Cleaning up after init
+    ([... answerSection.children]).forEach(el => el.remove())
+    Object.entries(dataPack[npage].options).forEach(function(ele, index) {
+    // ele.getBoundingClientRect()
+      var questionDiv = document.createElement('div')
+      questionDiv.dataset.key = ele[0]
+      questionDiv.classList.add('box', 'circle')
+      questionDiv.innerHTML = ele[1]
+      answerSection.appendChild(questionDiv)
+      const width = questionDiv.getBoundingClientRect().width
+      
+      questionDiv.style.transform = `translate(${-width/2}px, -25vh)rotate(${index*120}deg)` 
+      
+      questionDiv.addEventListener('click', function(event) {
+        answers.push([event.target.dataset.key, event.target.innerHTML])
+        console.log(answers)
+        currentPage++
+        nextPage(currentPage)
+      });
     });
-    var answerSection = document.querySelector("#slide1")
-    $(answerSection).empty()
-    answerSection.appendChild(questionTitle)
+    
+    
     //answerSection.innerHTML = ''; //Quickly cleans the HTML content inside the slide
-    answerSection.appendChild(optionText)
-    optionText.addEventListener('click', function(event) {
-      answers.push([event.target.dataset.key, event.target.innerHTML])
-      currentPage++
-      nextPage(currentPage)
-    });
+    
+
 
   } else {
     //evaluate the response, look on moviesData to find the tags
@@ -47,13 +74,14 @@ function nextPage(npage) {
       })
     })
     console.log(response)
-    var answerSection = document.querySelector("#slide1")
+    var answerSection = document.querySelector(".answer-container")
+
     $(answerSection).empty()
     if (response.length) {
 
-      var movieTitle = JSON.stringify(response, ["name"]).replace(/[{":"}]/g, "").replace("name", "").replace(/]|[[]/g, '')
-      var movieDesc = JSON.stringify(response, ["description"]).replace(/[{":"}]/g, "").replace("description", "").replace(/]|[[]/g, '')
-      var movieURL = JSON.stringify(response, ["video"]).replace(/[{""}]/g, "").replace("video", "").replace(/]|[[]/g, '')
+      var movieTitle = response[0].name
+      var movieDesc = response[0].description
+      var movieURL =  response[0].video
       //separates the name and description keys in the response array and filters out the object's leftovers
       //movieURL needs the colon removed before the actual URL
 
@@ -70,3 +98,5 @@ function nextPage(npage) {
 $(document).ready(function() {
   nextPage(0);
 });
+
+
