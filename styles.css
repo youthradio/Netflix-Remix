@@ -1,3 +1,7 @@
 body{
   background:	#FF7F50;
 }
+
+.deg120 {
+	transform: rotateZ(60deg);
+}

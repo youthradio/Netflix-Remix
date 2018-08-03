@@ -13,7 +13,7 @@ function nextPage(npage) {
     questionTitle.innerHTML = dataPack[npage].question;
     Object.entries(dataPack[npage].options).forEach(function(ele) {
       var buttonText = document.createElement('button')
-
+      buttonText.classList.add('deg120')
       buttonText.innerHTML = ele[1]
       buttonText.dataset.key = ele[0]
       optionText.appendChild(buttonText)
