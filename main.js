@@ -38,11 +38,19 @@ function nextPage(npage) {
       questionDiv.dataset.key = ele[0]
       questionDiv.classList.add('box', 'circle')
       questionDiv.innerHTML = ele[1]
+
+      var boxLine = document.createElement('div')
+      boxLine.classList.add('line', 'circle')
       answerSection.appendChild(questionDiv)
+      answerSection.appendChild(boxLine)
+
       const width = questionDiv.getBoundingClientRect().width
       
       questionDiv.style.transform = `translate(${-width/2}px, -25vh)rotate(${index*120}deg)` 
-      
+
+      const width2 = boxLine.getBoundingClientRect().width
+      boxLine.style.transform = `translate(${-width2/2}px, -25vh)rotate(${60+index*120}deg)` 
+
       questionDiv.addEventListener('click', function(event) {
         answers.push([event.target.dataset.key, event.target.innerHTML])
         console.log(answers)

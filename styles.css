@@ -12,16 +12,33 @@
   max-height:50px ;
 
 }
+
+.pie {
+  width: 50vh;
+  height: 50vh;
+  background-color: blue;
+  border-radius: 100%;
+}
+
+
 .box{
  position: absolute ;
   left: 50%;
   top: 50%;
  cursor: pointer;
+ padding: 25px;
+}
+.line{
+ position: absolute ;
+  left: 50%;
+  top: 50%;
+  border: 2px black solid;
+  height: 25vh;
 }
 .answer-container{
   position: relative;
   height: 50vh;
-  width: auto;
+  width: 50vh;
 }
 .circle{
   transform-origin: center 25vh;
