@@ -1,68 +1,33 @@
 var currentPage = 0;
 var answers = [];
 
-
-function drawCircle(data){
-  
-  document.querySelectorAll('.box-2').forEach((ele,index) => {
-
-    const width = ele.getBoundingClientRect().width
-    ele.innerHTML = data[index]
-
-    //apply for each elemente the transformation 
-    //move box to center, elemente box width/2 and move upwards -25vh 
-    //index counts from 0, 2 and step 120deg 
-
-    ele.style.transform = `translate(${-width/2}px, -25vh)rotate(${index*120}deg)` 
-
-  })
-  
-}
-
 function nextPage(npage) {
 
   if (currentPage < dataPack.length) {
     //checks if the current page's number isn't succeeding of the package's array count
-    // var buttonKey = document.querySelector(".box-2")
-    // $(buttonKey).empty()
 
-    var questionTitle = document.querySelector("#question-title");
-    // questionTitle.classList.add('title');
+    var questionTitle = document.querySelector("#question-title") //have to make 
     questionTitle.innerHTML = dataPack[npage].question;
-    var answerSection = document.querySelector(".answer-container");
-    //Cleaning up after init
-    ([... answerSection.children]).forEach(el => el.remove())
-    Object.entries(dataPack[npage].options).forEach(function(ele, index) {
-    // ele.getBoundingClientRect()
-      var questionDiv = document.createElement('div')
-      questionDiv.dataset.key = ele[0]
-      questionDiv.classList.add('box', 'circle')
-      questionDiv.innerHTML = ele[1]
+    dataPack[npage].options.forEach(function(obj, index) {
+      var buttonText = document.querySelector('button')
+      var opt = document.querySelector('#opt-'+(index+1))
 
-      var boxLine = document.createElement('div')
-      boxLine.classList.add('line', 'circle')
-      answerSection.appendChild(questionDiv)
-      answerSection.appendChild(boxLine)
+      opt.dataset.key = obj.label
+      opt.innerHTML = obj.label
+      console.log(obj.label)
+    });
+   
 
-      const width = questionDiv.getBoundingClientRect().width
-      
-      questionDiv.style.transform = `translate(${-width/2}px, -25vh)rotate(${index*120}deg)` 
-
-      const width2 = boxLine.getBoundingClientRect().width
-      boxLine.style.transform = `translate(${-width2/2}px, -25vh)rotate(${60+index*120}deg)` 
-
-      questionDiv.addEventListener('click', function(event) {
+   var answerSection = document.querySelector(".pie")
+    answerSection.addEventListener('click', function(event) {
+      if (event.target.dataset.key) {
+        console.log(event.target)
         answers.push([event.target.dataset.key, event.target.innerHTML])
-        console.log(answers)
         currentPage++
         nextPage(currentPage)
-      });
+      } 
+      
     });
-    
-    
-    //answerSection.innerHTML = ''; //Quickly cleans the HTML content inside the slide
-    
-
 
   } else {
     //evaluate the response, look on moviesData to find the tags
@@ -82,18 +47,14 @@ function nextPage(npage) {
       })
     })
     console.log(response)
-    var answerSection = document.querySelector(".answer-container")
-
+    var answerSection = document.querySelector("#slide1")
     $(answerSection).empty()
     if (response.length) {
 
-      var movieTitle = response[0].name
-      var movieDesc = response[0].description
-      var movieURL =  response[0].video
-      //separates the name and description keys in the response array and filters out the object's leftovers
-      //movieURL needs the colon removed before the actual URL
+      var movieTitle = JSON.stringify(response, ["name"])
+      var movieDesc = JSON.stringify(response, ["description"])
 
-      console.log(movieURL)
+      console.log(movieDesc)
 
       $('#title').text(movieTitle)
       $('#description-1').text(movieDesc)
@@ -106,5 +67,3 @@ function nextPage(npage) {
 $(document).ready(function() {
   nextPage(0);
 });
-
-
