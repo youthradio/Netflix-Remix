@@ -41,8 +41,12 @@ function nextPage(npage) {
         $(answerSection).empty()
         if (response.length) {
 
-            var movieTitle = JSON.stringify(response, ["name"])
-            var movieDesc = JSON.stringify(response, ["description"])
+        $("#pie-page").hide();
+        $("#results-page").show();
+
+            var movieTitle = response[0].name
+            var movieDesc = response[0].description
+            var movieURL =  response[0].video
 
             console.log(movieDesc)
 
@@ -67,5 +71,7 @@ answerSection.addEventListener('click', function(event) {
         });
 
 $(document).ready(function() {
+    $("#pie-page").show();
+    $("#results-page").hide();
     nextPage(0);
 });
