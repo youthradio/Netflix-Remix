@@ -52,6 +52,7 @@ function nextPage(npage) {
 
             $('#title').text(movieTitle)
             $('#description-1').text(movieDesc)
+            $('#video-url').attr("src", movieURL)
         } else {
             answerSection.innerHTML = "No movies!!"
         }
