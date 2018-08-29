@@ -12,7 +12,7 @@ var moviesData = [{
 
         "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.",
 
-        "video": "https://www.youtube.com/watch?v=-mw-Rhm8OIw",
+        "video": "https://www.youtube.com/embed/-mw-Rhm8OIw",
 
     },
     {
@@ -27,7 +27,7 @@ var moviesData = [{
 
         "description": "When four lifelong friends travel to New Orleans for the annual Essence Festival, sisterhoods are rekindled, wild sides are rediscovered, and there's enough dancing, drinking, brawling, and romancing to make the Big Easy blush.",
 
-        "video": "https://www.youtube.com/watch?v=7jE61BzKmgQ",
+        "video": "https://www.youtube.com/embed/7jE61BzKmgQ",
 
     },
     {
@@ -42,7 +42,7 @@ var moviesData = [{
 
         "description": "A man who has made a new life for himself and the daughter left on his doorstep 6 years ago finds his family threatened when the birth mother resurfaces.",
 
-        "video": "https://www.youtube.com/watch?v=-rlFr2lu0IY&t=64s",
+        "video": "https://www.youtube.com/embed/-rlFr2lu0IY",
 
     },
     {
@@ -56,7 +56,7 @@ var moviesData = [{
 
         },
         "description": "The story of a first generation Mexican-American girl and her passage to womanhood. Although she wants to go away to college, she must battle against the views of her parents, who think she should stay at home and provide for the family. As a compromise, she works with her mother in a sewing factory over the summer and learns some important lessons about life, helping her make a decision about her future.",
-        "video": "https://www.youtube.com/watch?v=vKpDifyDIp0"
+        "video": "https://www.youtube.com/embed/vKpDifyDIp0"
     },
 
     {
@@ -70,7 +70,7 @@ var moviesData = [{
 
         },
         "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.",
-        "video": "https://www.youtube.com/watch?v=-m3IB7N_PRk"
+        "video": "https://www.youtube.com/embed/-m3IB7N_PRk"
     },
 
     {
@@ -84,7 +84,7 @@ var moviesData = [{
 
         },
         "description": "The rivalry between two former college friends comes to a head when they both attend the same glamorous event.",
-        "video": "https://www.youtube.com/watch?v=XlA6XIj1sPk"
+        "video": "https://www.youtube.com/embed/XlA6XIj1sPk"
     },
 
     {
@@ -112,7 +112,7 @@ var moviesData = [{
 
         },
         "description": "Mary (Taraji P. Henson) is a hit woman working for an organized crime family in Boston, whose life is completely turned around when she meets a young boy whose path she crosses when a professional hit goes bad.",
-        "video": "https://www.youtube.com/watch?v=xjDjIWPwcPU"
+        "video": "https://www.youtube.com/embed/xjDjIWPwcPU"
     },
 
     {
@@ -126,7 +126,7 @@ var moviesData = [{
 
         },
         "description": "The drug war on the U.S.-Mexico border has escalated as the cartels have begun trafficking terrorists across the US border. To fight the war, federal agent Matt Graver re-teams with the mercurial Alejandro.",
-        "video": "https://www.youtube.com/watch?v=sIMChzE_aCo"
+        "video": "https://www.youtube.com/embed/sIMChzE_aCo"
     },
 
     {
@@ -140,7 +140,7 @@ var moviesData = [{
 
         },
         "description": "A young woman, after witnessing her parents' murder as a child in Bogota, grows up to be a stone-cold assassin.",
-        "video": "https://www.youtube.com/watch?v=HCxPLlFWdFo"
+        "video": "https://www.youtube.com/embed/HCxPLlFWdFo"
     },
 
     {
@@ -154,7 +154,7 @@ var moviesData = [{
 
         },
         "description": "A humble businessman with a buried past seeks justice when his daughter is killed in an act of terrorism. A cat-and-mouse conflict ensues with a government official, whose past may hold clues to the killers' identities.",
-        "video": "https://www.youtube.com/watch?v=om9YCk7ufHs"
+        "video": "https://www.youtube.com/embed/om9YCk7ufHs"
     },
 
     {
@@ -168,7 +168,7 @@ var moviesData = [{
 
         },
         "description": "A young girl risks everything to prevent a powerful, multinational company from kidnapping her best friend - a fascinating beast named Okja.",
-        "video": "https://www.youtube.com/watch?v=AjCebKn4iic"
+        "video": "https://www.youtube.com/embed/AjCebKn4iic"
     },
 
     {
@@ -182,7 +182,7 @@ var moviesData = [{
 
         },
         "description": "Four friends conspire to turn the tables on their women when they discover the ladies have been using Steve Harvey's relationship advice against them.",
-        "video": "https://www.youtube.com/watch?v=ajKT1dxFmNc"
+        "video": "https://www.youtube.com/embed/ajKT1dxFmNc"
     },
 
     {
@@ -196,7 +196,7 @@ var moviesData = [{
 
         },
         "description": "The pressures of fame have superstar singer Noni on the edge, until she meets Kaz, a young cop who works to help her find the courage to develop her own voice and break free to become the artist she was meant to be.",
-        "video": "https://www.youtube.com/watch?v=sfcfZn8nq3w"
+        "video": "https://www.youtube.com/embed/sfcfZn8nq3w"
     },
 
     {
@@ -210,7 +210,7 @@ var moviesData = [{
 
         },
         "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.",
-        "video": "https://www.youtube.com/watch?v=4-uFPihwibQ"
+        "video": "https://www.youtube.com/embed/4-uFPihwibQ"
     },
 
     {
@@ -224,7 +224,7 @@ var moviesData = [{
 
         },
         "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.",
-        "video": "https://www.youtube.com/watch?v=7ES0L8P7dwc"
+        "video": "https://www.youtube.com/embed/7ES0L8P7dwc"
     },
 
     {
@@ -238,7 +238,7 @@ var moviesData = [{
 
         },
         "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.",
-        "video": "https://www.youtube.com/watch?v=aeqqgAbHItY"
+        "video": "https://www.youtube.com/embed/aeqqgAbHItY"
     },
 
     {
