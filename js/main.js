@@ -6,18 +6,19 @@ function nextPage(npage) {
     if (currentPage < dataPack.length) {
         //checks if the current page's number isn't succeeding of the package's array count
 
-        var questionTitle = document.querySelector("#question-title") //have to make 
+        var questionTitle = document.querySelector("#question-title") //have to make
         questionTitle.innerHTML = dataPack[npage].question;
         dataPack[npage].options.forEach(function(obj, index) {
             var buttonText = document.querySelector('button')
             var opt = document.querySelector('#opt-' + (index + 1))
+            var image = document.querySelector(`#img-${index + 1} image`)
 
-
+            image.setAttribute('xlink:href', obj.url)
             opt.dataset.key = obj.label
             opt.innerHTML = obj.label
             /*console.log(obj.label)*/
         });
-        
+
 
     } else {
         //evaluate the response, look on moviesData to find the tags
@@ -52,6 +53,7 @@ function nextPage(npage) {
 
             $('#title').text(movieTitle)
             $('#description-1').text(movieDesc)
+            $('#video-url').attr("src", movieURL)
         } else {
             answerSection.innerHTML = "No movies!!"
         }
@@ -72,6 +74,5 @@ answerSection.addEventListener('click', function(event) {
 
 $(document).ready(function() {
     $("#pie-page").show();
-    $("#results-page").hide();
     nextPage(0);
 });

@@ -1,4 +1,11 @@
-
+.svg-container {
+	display: inline-block;
+	position: relative;
+	width: 100%;
+	/* padding-bottom: 100%; */
+	vertical-align: middle;
+	overflow: hidden;
+}
 
 .try{
   position: relative;
@@ -13,13 +20,13 @@
 
 }
 
-.pie {
+/* .pie {
   width: 50vh;
   height: 50vh;
   background-color: white;
   border-radius: 100%;
   overflow: hidden;
-}
+} */
 /*
 .pie {
     margin: 1em auto;
@@ -31,7 +38,11 @@
   overflow: hidden;
 }*/
 
-
+.svg-label {
+  cursor: pointer;
+  padding: 15px;
+  fill: white;
+}
 
 .box{
  position: absolute ;
@@ -50,8 +61,8 @@
 }
 
 .slice {
-  
-  overflow: hidden; 
+
+  overflow: hidden;
   position: absolute;
   top: 50%; right: 30%;
   height: 25vh;
@@ -68,8 +79,8 @@
   transition: background-color .5s;
 }
 .slice:first-child .slice-contents {
-  transform: skewY(40deg)  
-      rotate(25deg); 
+  transform: skewY(40deg)
+      rotate(25deg);
 }
 
 .bg{
@@ -80,7 +91,7 @@
   border: 2px black solid;
   border-radius: 20px;
   height: 25vh;
-  transform-origin: 0% 100%; 
+  transform-origin: 0% 100%;
   background-color: white;
 }
 
@@ -89,8 +100,8 @@
 }
 
 .bg:first-child {
-  transform: skewY(40deg)  
-      rotate(25deg); 
+  transform: skewY(40deg)
+      rotate(25deg);
 }
 
 .answer-container{
