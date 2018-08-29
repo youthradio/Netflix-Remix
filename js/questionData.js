@@ -18,17 +18,17 @@ var dataPack = [
 
             {
                 label: 'Action',
-                url: '',
+                url: 'img/Okja.png',
             },
 
             {
                 label: 'Comedy',
-                url: '',
+                url: 'img/Okja.png',
             },
 
             {
                 label: 'Romance',
-                url: '',
+                url: 'img/Okja.png',
             }
 
         ],
