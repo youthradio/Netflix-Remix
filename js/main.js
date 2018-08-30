@@ -55,6 +55,8 @@ function nextPage(npage) {
             $('#description-1').text(movieDesc)
             $('#video-url').attr("src", movieURL)
         } else {
+            $("#pie-page").hide();
+            $("#results-page-none").show();
             answerSection.innerHTML = "No movies!!"
         }
     }
