@@ -60,6 +60,17 @@ function nextPage(npage) {
     }
 };
 
+function tweetMessage (msg) {
+      const url = 'insert url'
+      const tweet = `#TeensVsNetflix: via @youthradio ${url}`
+      const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet)}`
+      window.open(tweetUrl, 'pop', 'width=600, height=400, scrollbars=no')
+    }
+
+$("#share").click(function() {
+    tweetMessage()
+})
+
 var answerSection = document.querySelector(".pie")
 answerSection.addEventListener('click', function(event) {
             if (event.target.dataset.key) {
