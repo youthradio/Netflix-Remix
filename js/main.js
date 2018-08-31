@@ -44,6 +44,7 @@ function nextPage(npage) {
 
         $("#pie-page").hide();
         $("#results-page").show();
+        $("#options").show();
 
             var movieTitle = response[0].name
             var movieDesc = response[0].description
@@ -57,7 +58,7 @@ function nextPage(npage) {
         } else {
             $("#pie-page").hide();
             $("#results-page-none").show();
-            answerSection.innerHTML = "No movies!!"
+            $("#options").show();
         }
     }
 };
