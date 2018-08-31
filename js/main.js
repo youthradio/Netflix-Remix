@@ -70,11 +70,21 @@ function tweetMessage (msg) {
       window.open(tweetUrl, 'pop', 'width=600, height=400, scrollbars=no')
     }
 
-$("#share").click(function() {
-    tweetMessage()
-})
+function tryAgain() {
+    currentPage = 0;
+    answers = [];
+    nextPage(0);
+    $("#pie-page").show();
+    $("#results-page").hide();
+    $("#results-page-none").hide();
+    $("#options").hide();
+
+    console.log(answers + ", " + currentPage)
+
+};
 
 var answerSection = document.querySelector(".pie")
+
 answerSection.addEventListener('click', function(event) {
             if (event.target.dataset.key) {
                 console.log(event.target)
@@ -85,6 +95,14 @@ answerSection.addEventListener('click', function(event) {
             }
 
         });
+
+$("#share").click(function() {
+    tweetMessage()
+})
+
+$("#try-again").click(function() {
+    tryAgain()
+})
 
 $(document).ready(function() {
     $("#pie-page").show();
