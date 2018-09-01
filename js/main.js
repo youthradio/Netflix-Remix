@@ -1,5 +1,10 @@
+//Inital variables
+
 var currentPage = 0;
 var answers = [];
+var answerSection = document.querySelector(".pie")
+
+//Functions
 
 function nextPage(npage) {
 
@@ -79,6 +84,9 @@ function nextPage(npage) {
             $('#description-1').text(movieDesc)
             $('#video-url').attr("src", movieURL)
         } else {
+
+            //There weren't any movies found!
+
             $("#pie-page").hide();
             $("#results-page-none").show();
             $("#options").show();
@@ -106,7 +114,7 @@ function tryAgain() {
 
 };
 
-var answerSection = document.querySelector(".pie")
+//Events
 
 answerSection.addEventListener('click', function(event) {
     if (event.target.dataset.key) {
