@@ -1,7 +1,27 @@
 //Writing nested tags like this links JSON keys explicitly with the variable instead of having a number of different keys you'd may have to call for.
 
-var moviesData = [{
-        "name": "Almost Christmas",
+var moviesData = [
+
+    {
+        "name": "Jumanji: Welcome to the Jungle",
+        "tags":
+
+        {
+            "tagOne": "Action",
+            "tagTwo": "Male",
+            "tagThree": "Black"
+        },
+
+        "description": "Four teenagers are sucked into a magical video game, and the only way they can escape is to work together to finish the game.",
+
+        "video": "",
+        "actors":"Dwayne Johnson, Kevin Hart ",
+        "year":"2017",
+
+    },
+
+    {
+        "name": "Central Intelligence",
         "tags":
 
         {
@@ -10,11 +30,32 @@ var moviesData = [{
             "tagThree": "Black"
         },
 
-        "description": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo.",
+        "description": "After he reconnects with an awkward pal from high school through Facebook, a mild-mannered accountant is lured into the world of international espionage.",
 
-        "video": "https://www.youtube.com/embed/-mw-Rhm8OIw",
+        "video": "",
+        "actors":"Dwayne Johnson, Kevin Hart ",
+        "year":"2016",
 
     },
+
+    {
+        "name": "Ride Along",
+        "tags":
+
+        {
+            "tagOne": "Comedy",
+            "tagTwo": "Male",
+            "tagThree": "Black"
+        },
+
+        "description": "Security guard Ben must prove himself to his girlfriend's brother, top police officer James. He rides along James on a 24-hour patrol of Atlanta.",
+
+        "video": "",
+        "actors":"Kevin Hart, O'shea Jackson",
+        "year":"2014",
+
+    },
+
     {
         "name": "Girls Trip",
         "tags":
@@ -98,7 +139,9 @@ var moviesData = [{
 
         },
         "description": "T'Challa, heir to the hidden but advanced kingdom of Wakanda, must step forward to lead his people into a new future and must confront a challenger from his country's past.",
-        "video": "null"
+        "video": "https://www.youtube.com/embed/xjDjIWPwcPU",
+        "actors": "Chadwick Boseman, Michael B. Jordan",
+        "year": "2018"
     },
 
     {
@@ -112,7 +155,9 @@ var moviesData = [{
 
         },
         "description": "Mary (Taraji P. Henson) is a hit woman working for an organized crime family in Boston, whose life is completely turned around when she meets a young boy whose path she crosses when a professional hit goes bad.",
-        "video": "https://www.youtube.com/embed/xjDjIWPwcPU"
+        "video": "https://www.youtube.com/embed/xjDjIWPwcPU",
+        "actors": "Taraji P. Henson",
+        "year": "2018"
     },
 
     {
@@ -126,7 +171,9 @@ var moviesData = [{
 
         },
         "description": "The drug war on the U.S.-Mexico border has escalated as the cartels have begun trafficking terrorists across the US border. To fight the war, federal agent Matt Graver re-teams with the mercurial Alejandro.",
-        "video": "https://www.youtube.com/embed/sIMChzE_aCo"
+        "video": "https://www.youtube.com/embed/sIMChzE_aCo",
+        "actors": "Benicio Del Toro",
+        "year":"2018"
     },
 
     {
@@ -140,7 +187,9 @@ var moviesData = [{
 
         },
         "description": "A young woman, after witnessing her parents' murder as a child in Bogota, grows up to be a stone-cold assassin.",
-        "video": "https://www.youtube.com/embed/HCxPLlFWdFo"
+        "video": "https://www.youtube.com/embed/HCxPLlFWdFo",
+        "actors":"Zoe Saldana",
+        "year":"2011"
     },
 
     {
@@ -168,7 +217,9 @@ var moviesData = [{
 
         },
         "description": "A young girl risks everything to prevent a powerful, multinational company from kidnapping her best friend - a fascinating beast named Okja.",
-        "video": "https://www.youtube.com/embed/AjCebKn4iic"
+        "video": "https://www.youtube.com/embed/AjCebKn4iic",
+        "actors":"Seohyun An",
+        "year":"2017"
     },
 
     {

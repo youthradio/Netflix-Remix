@@ -38,19 +38,42 @@ function nextPage(npage) {
             })
         })
         console.log(response)
-        var answerSection = document.querySelector("#slide1")
-        $(answerSection).empty()
-        if (response.length) {
+        if (response.length == 1) {
 
-        $("#pie-page").hide();
-        $("#results-page").show();
-        $("#options").show();
+            $("#pie-page").hide();
+            $("#results-page").show();
+            $("#options").show();
+
 
             var movieTitle = response[0].name
             var movieDesc = response[0].description
-            var movieURL =  response[0].video
+            var movieURL = response[0].video
 
             console.log(movieDesc)
+
+            $('#title').text(movieTitle)
+            $('#description-1').text(movieDesc)
+            $('#video-url').attr("src", movieURL)
+        } else if (response.length > 1) {
+
+            //For outcomes that provide more than a single film, randomize a selection in that array
+
+            var singleResponse = function() {
+                var rProcess = response[Math.floor(Math.random() * response.length)];
+                return rProcess;
+            }
+
+            //Call the function
+
+
+            $("#pie-page").hide();
+            $("#results-page").show();
+            $("#options").show();
+
+
+            var movieTitle = singleResponse().name
+            var movieDesc = singleResponse().description
+            var movieURL = singleResponse().video
 
             $('#title').text(movieTitle)
             $('#description-1').text(movieDesc)
@@ -63,12 +86,12 @@ function nextPage(npage) {
     }
 };
 
-function tweetMessage (msg) {
-      const url = 'insert url'
-      const tweet = `#TeensVsNetflix: via @youthradio ${url}`
-      const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet)}`
-      window.open(tweetUrl, 'pop', 'width=600, height=400, scrollbars=no')
-    }
+function tweetMessage(msg) {
+    const url = 'insert url'
+    const tweet = `#TeensVsNetflix: via @youthradio ${url}`
+    const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet)}`
+    window.open(tweetUrl, 'pop', 'width=600, height=400, scrollbars=no')
+}
 
 function tryAgain() {
     currentPage = 0;
@@ -86,15 +109,15 @@ function tryAgain() {
 var answerSection = document.querySelector(".pie")
 
 answerSection.addEventListener('click', function(event) {
-            if (event.target.dataset.key) {
-                console.log(event.target)
-                answers.push([event.target.dataset.key, event.target.innerHTML])
-                currentPage++
-                nextPage(currentPage)
-                console.log(currentPage)
-            }
+    if (event.target.dataset.key) {
+        console.log(event.target)
+        answers.push([event.target.dataset.key, event.target.innerHTML])
+        currentPage++
+        nextPage(currentPage)
+        console.log(currentPage)
+    }
 
-        });
+});
 
 $("#share").click(function() {
     tweetMessage()
