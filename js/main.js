@@ -13,17 +13,24 @@ function nextPage(npage) {
 
         var questionTitle = document.querySelector("#question-title") //have to make
         questionTitle.innerHTML = dataPack[npage].question;
+
         dataPack[npage].options.forEach(function(obj, index) {
             var buttonText = document.querySelector('button')
             var opt = document.querySelector('#opt-' + (index + 1))
             var image = document.querySelector(`#img-${index + 1} image`)
+            
 
             image.setAttribute('xlink:href', obj.url)
             opt.dataset.key = obj.label
             opt.innerHTML = obj.label
             /*console.log(obj.label)*/
+
+
         });
 
+        var fF = document.querySelector('#fun-fact-text')
+        /*fF.innerHTML = dataPack[npage].funFact.fact*/
+        fF.innerHTML = funFactPack[npage].fact
 
     } else {
         //evaluate the response, look on moviesData to find the tags
