@@ -1,14 +1,22 @@
-var funFactGenre = {
-    "fact1": "Lorem ipsum dolor sit amet, consectetuer adipiscingelit. Aenean commodo ligula eget dolor. Aenean massa.",
-    "fact2": "Lorem ipsum dolor sit amet, consectetuer adipiscingelit. Aenean commodo ligula eget dolor. Aenean massa.",
-    "fact3": "Lorem ipsum dolor sit amet, consectetuer adipiscingelit. Aenean commodo ligula eget dolor. Aenean massa."
-};
+var funFactPack = [
 
-var funFactGender = {
-    "fact1": "Lorem ipsum dolor sit amet, consectetuer adipiscingelit. Aenean commodo ligula eget dolor. Aenean massa.",
-    "fact2": "Lorem ipsum dolor sit amet, consectetuer adipiscingelit. Aenean commodo ligula eget dolor. Aenean massa.",
-    "fact3": "Lorem ipsum dolor sit amet, consectetuer adipiscingelit. Aenean commodo ligula eget dolor. Aenean massa."
-};
+    {
+        "fact":"only 1.4 out of 10 lead actors in film are people of color?",
+        "url":"https://socialsciences.ucla.edu/wp-content/uploads/2018/02/UCLA-Hollywood-Diversity-Report-2018-2-27-18.pdf",
+    },
+
+    {
+        "fact":"women accounted for 31.2 percent of the leads in top films for 2016?",
+        "url":"https://socialsciences.ucla.edu/wp-content/uploads/2018/02/UCLA-Hollywood-Diversity-Report-2018-2-27-18.pdf",
+    },
+
+    {
+        "fact":"people of color accounted for 13.9 percent of the leads in top films for 2016?",
+        "url":"https://socialsciences.ucla.edu/wp-content/uploads/2018/02/UCLA-Hollywood-Diversity-Report-2018-2-27-18.pdf",
+    },
+
+
+]
 
 var dataPack = [
 
