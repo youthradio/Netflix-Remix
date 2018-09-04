@@ -48,6 +48,7 @@ function nextPage(npage) {
             $("#pie-page").hide();
             $("#results-page").show();
             $("#options").show();
+            $("#question-title").hide();
 
 
             var movieTitle = response[0].name
@@ -74,6 +75,7 @@ function nextPage(npage) {
             $("#pie-page").hide();
             $("#results-page").show();
             $("#options").show();
+            $("#question-title").hide();
 
 
             var movieTitle = singleResponse().name
@@ -90,6 +92,7 @@ function nextPage(npage) {
             $("#pie-page").hide();
             $("#results-page-none").show();
             $("#options").show();
+            $("#question-title").hide();
         }
     }
 };
@@ -109,6 +112,7 @@ function tryAgain() {
     $("#results-page").hide();
     $("#results-page-none").hide();
     $("#options").hide();
+    $("#question-title").show();
 
     console.log(answers + ", " + currentPage)
 
