@@ -26,17 +26,17 @@ var dataPack = [
 
             {
                 label: 'Action',
-                url: 'img/pie/p-1.png',
+                url: 'img/pie/genre/action.png',
             },
 
             {
                 label: 'Comedy',
-                url: 'img/pie/p-2.png',
+                url: 'img/pie/genre/comedy.png',
             },
 
             {
-                label: 'Romance',
-                url: 'img/pie/p-3.png',
+                label: 'Drama',
+                url: 'img/pie/genre/drama.png',
             }
 
         ],
@@ -45,15 +45,15 @@ var dataPack = [
         "question": "Should the lead be…",
         options: [{
                 label: 'Female',
-                url: '',
+                url: 'img/pie/gender/female.png',
             },
             {
                 label: 'Male',
-                url: '',
+                url: 'img/pie/gender/male.png',
             },
             {
                 label: 'Nonbinary',
-                url: '',
+                url: 'img/pie/gender/trans.png',
             },
         ],
     },
@@ -63,18 +63,18 @@ var dataPack = [
         options:[
 
         {
-          label: 'Black',
-          url: '',
-        },
-
-        {
           label: 'Latino',
-          url: '',
+          url: 'img/pie/ethnicity/latinx.png',
         },
 
-        {
+         {
           label: 'Asian',
-          url: '',
+          url: 'img/pie/ethnicity/asian.png',
+        },
+
+       {
+          label: 'Black',
+          url: 'img/pie/ethnicity/black.png',
         },
 
         ],
