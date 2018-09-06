@@ -1,5 +1,5 @@
 //Inital variables
-
+const $ = (s) => document.querySelector(s)
 var currentPage = 0;
 var answers = [];
 var answerSection = document.querySelector(".pie")
@@ -18,7 +18,7 @@ function nextPage(npage) {
             var buttonText = document.querySelector('button')
             var opt = document.querySelector('#opt-' + (index + 1))
             var image = document.querySelector(`#img-${index + 1} image`)
-            
+
 
             image.setAttribute('xlink:href', obj.url)
             opt.dataset.key = obj.label
@@ -52,10 +52,10 @@ function nextPage(npage) {
         console.log(response)
         if (response.length == 1) {
 
-            $("#pie-page").hide();
-            $("#results-page").show();
-            $("#options").show();
-            $("#question-title").hide();
+            $("#pie-page").hidden = true;
+            $("#results-page").hidden = false;
+            $("#options").hidden = false;
+            $("#question-title").hidden = true;
 
 
             var movieTitle = response[0].name
@@ -64,9 +64,9 @@ function nextPage(npage) {
 
             console.log(movieDesc)
 
-            $('#title').text(movieTitle)
-            $('#description-1').text(movieDesc)
-            $('#video-url').attr("src", movieURL)
+            $('#title').innerHTML = movieTitle
+            $('#description-1').innerHTML = movieDesc
+            $('#video-url').src = movieURL
         } else if (response.length > 1) {
 
             //For outcomes that provide more than a single film, randomize a selection in that array
@@ -79,27 +79,27 @@ function nextPage(npage) {
             //Call the function
 
 
-            $("#pie-page").hide();
-            $("#results-page").show();
-            $("#options").show();
-            $("#question-title").hide();
+            $("#pie-page").hidden = true;
+            $("#results-page").hidden = false;
+            $("#options").hidden = false;
+            $("#question-title").hidden = true;
 
 
             var movieTitle = singleResponse().name
             var movieDesc = singleResponse().description
             var movieURL = singleResponse().video
 
-            $('#title').text(movieTitle)
-            $('#description-1').text(movieDesc)
-            $('#video-url').attr("src", movieURL)
+            $('#title').innerHTML = movieTitle
+            $('#description-1').innerHTML = movieDesc
+            $('#video-url').src = movieURL
         } else {
 
             //There weren't any movies found!
 
-            $("#pie-page").hide();
-            $("#results-page-none").show();
-            $("#options").show();
-            $("#question-title").hide();
+            $("#pie-page").hidden = true;
+            $("#results-page-none").hidden = false;
+            $("#options").hidden = false;
+            $("#question-title").hidden = true;
         }
     }
 };
@@ -115,11 +115,11 @@ function tryAgain() {
     currentPage = 0;
     answers = [];
     nextPage(0);
-    $("#pie-page").show();
-    $("#results-page").hide();
-    $("#results-page-none").hide();
-    $("#options").hide();
-    $("#question-title").show();
+    $("#pie-page").hidden = false;
+    $("#results-page").hidden = true;;
+    $("#results-page-none").hidden = true;
+    $("#options").hidden = true;
+    $("#question-title").hidden = false;
 
     console.log(answers + ", " + currentPage)
 
@@ -138,15 +138,15 @@ answerSection.addEventListener('click', function(event) {
 
 });
 
-$("#share").click(function() {
+$("#share").addEventListener('click', function() {
     tweetMessage()
 })
 
-$("#try-again").click(function() {
+$("#try-again").addEventListener('click', function() {
     tryAgain()
 })
 
-$(document).ready(function() {
-    $("#pie-page").show();
+document.addEventListener("DOMContentLoaded", function() {
+    $("#pie-page").hidden = false;
     nextPage(0);
 });
