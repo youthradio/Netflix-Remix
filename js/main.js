@@ -30,7 +30,7 @@ function nextPage(npage) {
 
         var fF = document.querySelector('#fun-fact-text')
         /*fF.innerHTML = dataPack[npage].funFact.fact*/
-        fF.innerHTML = funFactPack[npage].fact
+        fF.innerHTML = dataPack[npage].funfact.fact
 
     } else {
         //evaluate the response, look on moviesData to find the tags
@@ -45,7 +45,7 @@ function nextPage(npage) {
                 //all answers is true
                 //for each answer find if its on the movie
                 //get the movie tags values, not the keys
-                return Object.values(movie.tags).includes(answer[1]) // this return is for the
+                return movie.tags.includes(answer[1]) // this return is for the
                 //the every function
             })
         })
@@ -66,7 +66,7 @@ function nextPage(npage) {
 
             $('#title').innerHTML = movieTitle
             $('#description-1').innerHTML = movieDesc
-            $('#video-url').src = movieURL
+            $('#video-url').src = movieURL.replace('watch?v=', 'embed/')
         } else if (response.length > 1) {
 
             //For outcomes that provide more than a single film, randomize a selection in that array
@@ -91,7 +91,7 @@ function nextPage(npage) {
 
             $('#title').innerHTML = movieTitle
             $('#description-1').innerHTML = movieDesc
-            $('#video-url').src = movieURL
+            $('#video-url').src = movieURL.replace('watch?v=', 'embed/')
         } else {
 
             //There weren't any movies found!
@@ -120,6 +120,7 @@ function tryAgain() {
     $("#results-page-none").hidden = true;
     $("#options").hidden = true;
     $("#question-title").hidden = false;
+    $('#video-url').src = ''
 
     console.log(answers + ", " + currentPage)
 
@@ -145,8 +146,7 @@ $("#share").addEventListener('click', function() {
 $("#try-again").addEventListener('click', function() {
     tryAgain()
 })
-
-document.addEventListener("DOMContentLoaded", function() {
+fetchData().then(() => {
     $("#pie-page").hidden = false;
     nextPage(0);
 });
