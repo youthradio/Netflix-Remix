@@ -1,9 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Assistant:300,400,600,700,800|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i');
-
-body, tspan {
-  font-family: 'Assistant', Sans;
-}
-
 .svg-container {
 	display: inline-block;
 	position: relative;
@@ -11,6 +5,22 @@ body, tspan {
 	/* padding-bottom: 100%; */
 	vertical-align: middle;
 	overflow: hidden;
+}
+
+.font-assistant{
+    font-family: 'Assistant', Sans;
+}
+.font-roboto{
+    font-family: 'Roboto', Sans;
+}
+.font-calps{
+    font-family: 'Calps', Sans;
+}
+.font-dSans{
+    font-family: 'Days Sans', Sans;
+}
+.font-sgMVB{
+    font-family: 'Solano Gothic MVB', Sans;
 }
 
 .try{

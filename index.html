@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://yri.youthradio.org/yr-typography/yr-typography.css">
     <link rel="stylesheet" href="css/styles.css">
     <title>Hello, world!</title>
 </head>
@@ -19,11 +20,11 @@
                 <img src="img/yr_black.png" class="img-fluid yr" alt="">
                 </a>
             </div>
-            <div class="col-12">
+            <div class="col-12 font-dSans">
                 <h1 class="text-center">Remix Netflix</h1>
             </div>
             <div class="col-md-6 offset-md-3">
-                <h5 id="question-title" class="text-center set"></h5>
+                <h5 id="question-title" class="text-center font-assistant set"></h5>
             </div>
         </header>
         <div id="pie-page" hidden>
@@ -56,7 +57,7 @@
                                                 <use fill-opacity="0.4" fill="#FF9B26" fill-rule="evenodd" xlink:href="#rect-3"></use>
                                             </g>
                                             <text class="svg-label" id="Label-3" font-family="Helvetica" font-size="34" font-weight="normal" fill="#000000" alignment-baseline="central" text-anchor="middle">
-                                                <tspan id="opt-3" x="151" y="87">Label 3</tspan>
+                                                <tspan class="font-assistant" id="opt-3" x="151" y="87">Label 3</tspan>
                                             </text>
                                         </g>
                                         <g id="img-2" transform="translate(174.000000, 88.000000)">
@@ -69,7 +70,7 @@
                                                 <use fill-opacity="0.4" fill="#54C6EB" fill-rule="evenodd" xlink:href="#rect-6"></use>
                                             </g>
                                             <text class="svg-label" id="Label-2" font-family="Helvetica" font-size="34" font-weight="normal" fill="#000000" alignment-baseline="central" text-anchor="middle">
-                                                <tspan id="opt-2" x="87" y="150">Label 2</tspan>
+                                                <tspan class="font-assistant" id="opt-2" x="87" y="150">Label 2</tspan>
                                             </text>
                                         </g>
                                         <g id="img-1" transform="translate(0.000000, 87.000000)">
@@ -82,7 +83,7 @@
                                                 <use fill-opacity="0.4" fill="#E051DA" fill-rule="evenodd" xlink:href="#rect-9"></use>
                                             </g>
                                             <text class="svg-label" id="Label-1" font-family="Helvetica" font-size="34" font-weight="normal" fill="#000000" alignment-baseline="central" text-anchor="middle">
-                                                <tspan id="opt-1" x="87" y="150">Label 1</tspan>
+                                                <tspan class="font-assistant" id="opt-1" x="87" y="150">Label 1</tspan>
                                             </text>
                                         </g>
                                     </g>
@@ -94,14 +95,14 @@
             </article>
             <div class="row mb-2">
                 <div class="col-md-6 offset-md-3">
-                    <p class="text-center" id="fun-fact">Did you know...<span class="font-italic" id="fun-fact-text"></span></p>
+                    <p class="text-center font-assistant" id="fun-fact">Did you know...<span class="font-italic" id="fun-fact-text"></span></p>
                 </div>
             </div>
         </div>
         <div id="results-page" hidden>
             <div class="row">
                 <div class="col-12">
-                    <h1 id="title" class="text-center font-weight-bold"></h1>
+                    <h1 id="title" class="text-center font-dSans font-weight-bold"></h1>
                 </div>
                 
                 <div class="col-12">
@@ -111,17 +112,17 @@
                 </div>
 
                 <div class="col-12 pt-2">
-                    <p id="description-1" class="text-left"></p>
-                    <p id="description-2" class="text-left"></p>
+                    <p id="description-1" class="text-left font-assistant"></p>
+                    <p id="description-2" class="text-left font-assistant"></p>
                 </div>
             </div>
         </div>
         <div id="results-page-none" hidden>
             <div class="row">
                 <div class="col-12">
-                    <p class="text-center font-weight-bold">Nothing!</p>
+                    <p class="text-center font-dSans font-weight-bold">Nothing!</p>
                 </div>
-                <div class="col-12">
+                <div class="col-12 font-assistant">
                     <p>Sorry, it looks like we couldn't find any movies you're describing, which is a problem in the film industry.</p>
                     <p>According to statistics, lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet.</p>
                 </div>
@@ -129,14 +130,14 @@
         </div>
         <div id="options" hidden class="row pt-2 text-center">
             <div class="col-6">
-                <button id="share" type="button" class="btn btn-lg btn-block btn-light">SHARE!</button>
+                <button id="share" type="button" class="btn btn-lg btn-block btn-light font-assistant">SHARE!</button>
             </div>
             <div class="col-6">
-                <button id="try-again" type="button" class="btn btn-lg btn-block btn-light">TRY AGAIN!</button>
+                <button id="try-again" type="button" class="btn btn-lg btn-block btn-light font-assistant">TRY AGAIN!</button>
             </div>
         </div>
         <footer class="row fixed-bottom">
-            <div class="col-12 copyright text-right pr-5 mt-2">
+            <div class="col-12 font-assistant copyright text-right pr-5 mt-2">
                 © 2018 Youth Radio
             </div>
         </footer>
