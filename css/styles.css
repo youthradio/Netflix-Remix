@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Assistant:300,400,600,700,800|Roboto+Mono:100,100i,300,300i,400,400i,500,500i,700,700i');
+
+body, tspan {
+  font-family: 'Assistant', Sans;
+}
+
 .svg-container {
 	display: inline-block;
 	position: relative;
