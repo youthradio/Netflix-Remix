@@ -7,6 +7,22 @@
 	overflow: hidden;
 }
 
+.font-assistant{
+    font-family: 'Assistant', Sans;
+}
+.font-roboto{
+    font-family: 'Roboto', Sans;
+}
+.font-calps{
+    font-family: 'Calps', Sans;
+}
+.font-dSans{
+    font-family: 'Days Sans', Sans;
+}
+.font-sgMVB{
+    font-family: 'Solano Gothic MVB', Sans;
+}
+
 .try{
   position: relative;
   height: 100vh;

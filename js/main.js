@@ -71,23 +71,18 @@ function nextPage(npage) {
 
             //For outcomes that provide more than a single film, randomize a selection in that array
 
-            var singleResponse = function() {
-                var rProcess = response[Math.floor(Math.random() * response.length)];
-                return rProcess;
-            }
-
-            //Call the function
-
-
+         
+            var rProcess = response[Math.floor(Math.random() * response.length)];
+     
             $("#pie-page").hidden = true;
             $("#results-page").hidden = false;
             $("#options").hidden = false;
             $("#question-title").hidden = true;
 
 
-            var movieTitle = singleResponse().name
-            var movieDesc = singleResponse().description
-            var movieURL = singleResponse().video
+            var movieTitle = rProcess.name
+            var movieDesc = rProcess.description
+            var movieURL = rProcess.video
 
             $('#title').innerHTML = movieTitle
             $('#description-1').innerHTML = movieDesc
