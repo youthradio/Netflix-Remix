@@ -52,6 +52,27 @@ function nextPage(npage) {
         console.log(response)
         if (response.length == 1) {
 
+            if (response[0].name == "None") {
+
+            $("#pie-page").hidden = true;
+            $("#results-page").hidden = false;
+            $("#options").hidden = false;
+            $("#question-title").hidden = true;
+            $("#yt-video").hidden = true;
+
+
+            var movieTitle = response[0].name
+            var movieDesc = response[0].description
+            var movieURL = response[0].video
+
+            console.log(movieDesc)
+
+            $('#title').innerHTML = movieTitle
+            $('#description-1').innerHTML = movieDesc
+
+            }
+            else{
+
             $("#pie-page").hidden = true;
             $("#results-page").hidden = false;
             $("#options").hidden = false;
@@ -67,6 +88,7 @@ function nextPage(npage) {
             $('#title').innerHTML = movieTitle
             $('#description-1').innerHTML = movieDesc
             $('#video-url').src = movieURL.replace('watch?v=', 'embed/')
+            }
         } else if (response.length > 1) {
 
             //For outcomes that provide more than a single film, randomize a selection in that array
@@ -87,15 +109,7 @@ function nextPage(npage) {
             $('#title').innerHTML = movieTitle
             $('#description-1').innerHTML = movieDesc
             $('#video-url').src = movieURL.replace('watch?v=', 'embed/')
-        } else {
-
-            //There weren't any movies found!
-
-            $("#pie-page").hidden = true;
-            $("#results-page-none").hidden = false;
-            $("#options").hidden = false;
-            $("#question-title").hidden = true;
-        }
+        } 
     }
 };
 
@@ -111,8 +125,7 @@ function tryAgain() {
     answers = [];
     nextPage(0);
     $("#pie-page").hidden = false;
-    $("#results-page").hidden = true;;
-    $("#results-page-none").hidden = true;
+    $("#results-page").hidden = true;
     $("#options").hidden = true;
     $("#question-title").hidden = false;
     $('#video-url').src = ''
