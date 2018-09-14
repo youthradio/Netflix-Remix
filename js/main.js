@@ -50,33 +50,23 @@ function nextPage(npage) {
             })
         })
         console.log(response)
+
         if (response.length == 1) {
 
+            //Need something to check if the answers start with a vowel
+
+            var statement = "A " + answers[0][0] + " Movie with " + "A " + answers[2][0] + " " + answers[1][0] + " Lead is...";
+            $('#pre-title').innerHTML = statement;
+
+            $("#pie-page").hidden = true;
+            $("#results-page").hidden = false;
+            $("#options").hidden = false;
+            $("#question-title").hidden = true;
+
             if (response[0].name == "None") {
-
-            $("#pie-page").hidden = true;
-            $("#results-page").hidden = false;
-            $("#options").hidden = false;
-            $("#question-title").hidden = true;
-            $("#yt-video").hidden = true;
-
-
-            var movieTitle = response[0].name
-            var movieDesc = response[0].description
-            var movieURL = response[0].video
-
-            console.log(movieDesc)
-
-            $('#title').innerHTML = movieTitle
-            $('#description-1').innerHTML = movieDesc
-
+                console.log("no movie found!!!")
+                $("#yt-video").hidden = true;
             }
-            else{
-
-            $("#pie-page").hidden = true;
-            $("#results-page").hidden = false;
-            $("#options").hidden = false;
-            $("#question-title").hidden = true;
 
 
             var movieTitle = response[0].name
@@ -88,7 +78,7 @@ function nextPage(npage) {
             $('#title').innerHTML = movieTitle
             $('#description-1').innerHTML = movieDesc
             $('#video-url').src = movieURL.replace('watch?v=', 'embed/')
-            }
+            
         } else if (response.length > 1) {
 
             //For outcomes that provide more than a single film, randomize a selection in that array
@@ -143,6 +133,7 @@ answerSection.addEventListener('click', function(event) {
         currentPage++
         nextPage(currentPage)
         console.log(currentPage)
+        console.log(answers)
     }
 
 });
