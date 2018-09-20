@@ -119,6 +119,7 @@ function tryAgain() {
     $("#options").hidden = true;
     $("#question-title").hidden = false;
     $('#video-url').src = ''
+    $("#yt-video").hidden = false;
 
     console.log(answers + ", " + currentPage)
 
