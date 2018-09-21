@@ -55,7 +55,7 @@ function nextPage(npage) {
 
             //Need something to check if the answers start with a vowel
 
-            var statement = "A " + answers[0][0] + " Movie with " + "A " + answers[2][0] + " " + answers[1][0] + " Lead is...";
+            var statement =  (answers[0][0][0] === 'A' ? 'An '  : 'A ') + answers[0][0] + " Movie with " + (answers[2][0][0] === 'A' ? 'An '  : 'A ') + answers[2][0] + " " + answers[1][0] + " Lead is...";
             $('#pre-title').innerHTML = statement;
 
             $("#pie-page").hidden = true;
@@ -82,6 +82,9 @@ function nextPage(npage) {
         } else if (response.length > 1) {
 
             //For outcomes that provide more than a single film, randomize a selection in that array
+
+            var statement =  (answers[0][0][0] === 'A' ? 'An '  : 'A ') + answers[0][0] + " Movie with " + (answers[2][0][0] === 'A' ? 'An '  : 'A ') + answers[2][0] + " " + answers[1][0] + " Lead is...";
+            $('#pre-title').innerHTML = statement;
 
          
             var rProcess = response[Math.floor(Math.random() * response.length)];
@@ -119,6 +122,7 @@ function tryAgain() {
     $("#options").hidden = true;
     $("#question-title").hidden = false;
     $('#video-url').src = ''
+    $("#yt-video").hidden = false;
 
     console.log(answers + ", " + currentPage)
 
