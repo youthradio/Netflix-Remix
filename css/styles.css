@@ -10,6 +10,11 @@
 .font-assistant{
     font-family: 'Assistant', Sans;
 }
+
+p {
+  font-size: 18px;
+}
+
 .font-roboto{
     font-family: 'Roboto', Sans;
 }
