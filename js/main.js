@@ -64,20 +64,30 @@ function nextPage(npage) {
             $("#question-title").hidden = true;
 
             if (response[0].name == "None") {
+
+                $("#description-1").classList.replace("text-left", "text-center");
                 console.log("no movie found!!!")
                 $("#yt-video").hidden = true;
+                $("#pre-desc").hidden = true;
             }
 
 
             var movieTitle = response[0].name
             var movieDesc = response[0].description
             var movieURL = response[0].video
+            var movieYear = response[0].year
+            var movieActors = response[0].actors
 
             console.log(movieDesc)
+            console.log(movieYear)
+            console.log(movieActors)
 
             $('#title').innerHTML = movieTitle
             $('#description-1').innerHTML = movieDesc
             $('#video-url').src = movieURL.replace('watch?v=', 'embed/')
+
+            $('#mYear').innerHTML = movieYear
+            $('#mActors').innerHTML = movieActors   
             
         } else if (response.length > 1) {
 
@@ -98,10 +108,15 @@ function nextPage(npage) {
             var movieTitle = rProcess.name
             var movieDesc = rProcess.description
             var movieURL = rProcess.video
+            var movieYear = rProcess.year
+            var movieActors = rProcess.actors
 
             $('#title').innerHTML = movieTitle
             $('#description-1').innerHTML = movieDesc
             $('#video-url').src = movieURL.replace('watch?v=', 'embed/')
+
+            $('#mYear').innerHTML = movieYear
+            $('#mActors').innerHTML = movieActors           
         } 
     }
 };
@@ -123,6 +138,8 @@ function tryAgain() {
     $("#question-title").hidden = false;
     $('#video-url').src = ''
     $("#yt-video").hidden = false;
+    $("#pre-desc").hidden = false;
+    $("#description-1").classList.replace("text-center", "text-left");
 
     console.log(answers + ", " + currentPage)
 
