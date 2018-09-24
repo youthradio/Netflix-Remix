@@ -159,11 +159,11 @@ answerSection.addEventListener('click', function(event) {
 
 });
 
-$("#share").addEventListener('click', function() {
+$("#tweetMessage").addEventListener('click', function() {
     tweetMessage()
 })
 
-$("#try-again").addEventListener('click', function() {
+$("#tryAgain").addEventListener('click', function() {
     tryAgain()
 })
 fetchData().then(() => {

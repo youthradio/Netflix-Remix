@@ -104,17 +104,21 @@
                     </div>
                 </div>
                 <div class="col-12 pt-2">
-                    <p id="pre-desc" class="font-weight-bold"><span id="mYear"></span>, Starring: <span id="mActors"></span></p><p id="description-1" class="text-left font-assistant"></p>
+                    <p id="pre-desc" class="font-weight-bold"><span id="mYear"></span>, Starring: <span id="mActors"></span></p>
+                    <p id="description-1" class="text-left font-assistant"></p>
                     <p id="description-2" class="text-left font-assistant"></p>
                 </div>
             </div>
         </div>
         <div id="options" hidden class="row pt-2 text-center">
-            <div class="col-6">
-                <button id="share" type="button" class="btn btn-lg btn-block btn-light font-assistant">SHARE!</button>
-            </div>
-            <div class="col-6">
-                <button id="try-again" type="button" class="btn btn-lg btn-block btn-light font-assistant">TRY AGAIN!</button>
+            <div class="d-flex align-items-center pl-3 pb-2">
+                <span class="icon-facebook-inverted share-icon m-1 pointer" id="facebookThis"> </span>
+                <span class="icon-twitter-inverted share-icon m-1 pointer" id="tweetMessage"> </span>
+                <div class="ml-auto align-middle pointer d-flex align-items-center pr-2" id="tryAgain">
+                    <span>Try Again</span>
+                    <div class="ml-2 icon-arrow-right pulse">
+                    </div>
+                </div>
             </div>
         </div>
         <footer class="row fixed-bottom">
