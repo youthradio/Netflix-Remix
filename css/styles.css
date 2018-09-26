@@ -217,3 +217,6 @@ li:nth-child(3) .text {
 .pointer {
 	cursor: pointer;
 }
+[hidden]{
+  display:none !important;
+}
