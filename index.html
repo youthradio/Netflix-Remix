@@ -110,14 +110,12 @@
                 </div>
             </div>
         </div>
-        <div id="options" hidden class="row pt-2 text-center">
-            <div class="d-flex align-items-center pl-3 pb-2">
-                <span class="icon-facebook-inverted share-icon m-1 pointer" id="facebookThis"> </span>
-                <span class="icon-twitter-inverted share-icon m-1 pointer" id="tweetMessage"> </span>
-                <div class="ml-auto align-middle pointer d-flex align-items-center pr-2" id="tryAgain">
-                    <span>Try Again</span>
-                    <div class="ml-2 icon-arrow-right pulse">
-                    </div>
+        <div id="options" class="d-flex align-items-center pl-3 pb-2" hidden>
+            <span class="icon-facebook-inverted share-icon m-1 pointer" id="facebookThis"> </span>
+            <span class="icon-twitter-inverted share-icon m-1 pointer" id="tweetMessage"> </span>
+            <div class="ml-auto align-middle pointer d-flex align-items-center pr-2" id="tryAgain">
+                <span>Try Again</span>
+                <div class="ml-2 icon-arrow-right pulse">
                 </div>
             </div>
         </div>
@@ -125,6 +123,7 @@
         </footer>
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="js/ResizeObserver.js"></script>
         <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
         <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
         <!-- <script src="js/movieData.js"></script>

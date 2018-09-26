@@ -87,8 +87,8 @@ function nextPage(npage) {
             $('#video-url').src = movieURL.replace('watch?v=', 'embed/')
 
             $('#mYear').innerHTML = movieYear
-            $('#mActors').innerHTML = movieActors   
-            
+            $('#mActors').innerHTML = movieActors
+
         } else if (response.length > 1) {
 
             //For outcomes that provide more than a single film, randomize a selection in that array
@@ -96,9 +96,9 @@ function nextPage(npage) {
             var statement =  (answers[0][0][0] === 'A' ? 'An '  : 'A ') + answers[0][0] + " Movie with " + (answers[2][0][0] === 'A' ? 'An '  : 'A ') + answers[2][0] + " " + answers[1][0] + " Lead is...";
             $('#pre-title').innerHTML = statement;
 
-         
+
             var rProcess = response[Math.floor(Math.random() * response.length)];
-     
+
             $("#pie-page").hidden = true;
             $("#results-page").hidden = false;
             $("#options").hidden = false;
@@ -116,8 +116,8 @@ function nextPage(npage) {
             $('#video-url').src = movieURL.replace('watch?v=', 'embed/')
 
             $('#mYear').innerHTML = movieYear
-            $('#mActors').innerHTML = movieActors           
-        } 
+            $('#mActors').innerHTML = movieActors
+        }
     }
 };
 
@@ -166,6 +166,19 @@ $("#tweetMessage").addEventListener('click', function() {
 $("#tryAgain").addEventListener('click', function() {
     tryAgain()
 })
+
+window.addEventListener('DOMContentLoaded', function() {
+  const elementRoot = $('body')
+    const resizeObserver = new ResizeObserver(entries => {
+      for (const entry of entries) {
+        const { height } = entry.contentRect;
+        const elementHeight = 'elementHeight:' + height;
+        console.log(elementHeight);
+        parent.postMessage(elementHeight, '*');
+      }
+    });
+    resizeObserver.observe(elementRoot);
+});
 fetchData().then(() => {
     $("#pie-page").hidden = false;
     nextPage(0);
