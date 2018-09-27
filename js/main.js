@@ -97,7 +97,9 @@ function nextPage(npage) {
             //For outcomes that provide more than a single film, randomize a selection in that array
 
             var statement =  (answers[0][0][0] === 'A' ? 'An '  : 'A ') + answers[0][0] + " Movie with " + (answers[2][0][0] === 'A' ? 'An '  : 'A ') + answers[2][0] + " " + answers[1][0] + " Lead is...";
-            $('#pre-title').innerHTML = statement;
+            statement = statement.toLowerCase()
+            var finalStatement = statement.charAt(0).toUpperCase() + statement.substr(1);
+            $('#pre-title').innerHTML = finalStatement;
 
 
             var rProcess = response[Math.floor(Math.random() * response.length)];
