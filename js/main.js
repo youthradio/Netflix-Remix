@@ -68,6 +68,7 @@ function nextPage(npage) {
                 $("#description-1").classList.replace("text-left", "text-center");
                 console.log("no movie found!!!")
                 $("#yt-video").hidden = true;
+                $("#react-img").hidden = false;
                 $("#pre-desc").hidden = true;
             }
 
@@ -134,6 +135,7 @@ function tryAgain() {
     nextPage(0);
     $("#pie-page").hidden = false;
     $("#results-page").hidden = true;
+    $("#react-img").hidden = true;
     $("#options").hidden = true;
     $("#question-title").hidden = false;
     $('#video-url').src = ''
