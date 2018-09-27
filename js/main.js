@@ -56,7 +56,9 @@ function nextPage(npage) {
             //Need something to check if the answers start with a vowel
 
             var statement =  (answers[0][0][0] === 'A' ? 'An '  : 'A ') + answers[0][0] + " Movie with " + (answers[2][0][0] === 'A' ? 'An '  : 'A ') + answers[2][0] + " " + answers[1][0] + " Lead is...";
-            $('#pre-title').innerHTML = statement;
+            statement = statement.toLowerCase()
+            var finalStatement = statement.charAt(0).toUpperCase() + statement.substr(1);
+            $('#pre-title').innerHTML = finalStatement;
 
             $("#pie-page").hidden = true;
             $("#results-page").hidden = false;
