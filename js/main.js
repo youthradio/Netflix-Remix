@@ -67,7 +67,7 @@ function nextPage(npage) {
             $("#options").hidden = false;
             $("#question-title").hidden = true;
 
-            if (response[0].name == "None") {
+            if (response[0].name === "None") {
 
                 $("#description-1").classList.replace("text-left", "text-center");
                 console.log("no movie found!!!")
@@ -75,6 +75,7 @@ function nextPage(npage) {
                 $("#react-img").hidden = false;
                 $("#pre-desc").hidden = true;
                 noFilm = true;
+                console.log(noFilm)
             }
 
             if (noFilm === true){
@@ -83,7 +84,8 @@ function nextPage(npage) {
             } 
 
             else {
-            var movieTitle = response[0].name }
+            var movieTitle = response[0].name 
+            console.log(noFilm)}
 
             var movieDesc = response[0].description
             var movieURL = response[0].video
@@ -146,7 +148,10 @@ function tweetMessage(msg) {
 function tryAgain() {
     currentPage = 0;
     answers = [];
+    noFilm = false;
     nextPage(0);
+    movieTitle = "";
+    $('#pre-title').hidden = false;
     $("#pie-page").hidden = false;
     $("#results-page").hidden = true;
     $("#react-img").hidden = true;
