@@ -1,8 +1,12 @@
 //Inital variables
+
 const $ = (s) => document.querySelector(s)
+//jQuery is now not needed, but to ensure the legacy code for selecting elements works, this defines the jquery function as a querySelector function
 var currentPage = 0;
 var answers = [];
 var answerSection = document.querySelector(".pie")
+//This couldn't be private
+var noFilm = false;
 
 //Functions
 
@@ -11,7 +15,7 @@ function nextPage(npage) {
     if (currentPage < dataPack.length) {
         //checks if the current page's number isn't succeeding of the package's array count
 
-        var questionTitle = document.querySelector("#question-title") //have to make
+        var questionTitle = document.querySelector("#question-title")
         questionTitle.innerHTML = dataPack[npage].question;
 
         dataPack[npage].options.forEach(function(obj, index) {
@@ -23,13 +27,11 @@ function nextPage(npage) {
             image.setAttribute('xlink:href', obj.url)
             opt.dataset.key = obj.label
             opt.innerHTML = obj.label
-            /*console.log(obj.label)*/
 
 
         });
 
         var fF = document.querySelector('#fun-fact-text')
-        /*fF.innerHTML = dataPack[npage].funFact.fact*/
         fF.innerHTML = dataPack[npage].funfact.fact
 
     } else {
@@ -72,10 +74,17 @@ function nextPage(npage) {
                 $("#yt-video").hidden = true;
                 $("#react-img").hidden = false;
                 $("#pre-desc").hidden = true;
+                noFilm = true;
             }
 
+            if (noFilm === true){
+                var movieTitle = "We couldn't find " + finalStatement.replace(/is.../g,'');
+                $('#pre-title').hidden = true;
+            } 
 
-            var movieTitle = response[0].name
+            else {
+            var movieTitle = response[0].name }
+
             var movieDesc = response[0].description
             var movieURL = response[0].video
             var movieYear = response[0].year
@@ -94,13 +103,14 @@ function nextPage(npage) {
 
         } else if (response.length > 1) {
 
-            //For outcomes that provide more than a single film, randomize a selection in that array
+            
 
             var statement =  (answers[0][0][0] === 'A' ? 'An '  : 'A ') + answers[0][0] + " Movie with " + (answers[2][0][0] === 'A' ? 'An '  : 'A ') + answers[2][0] + " " + answers[1][0] + " Lead is...";
             statement = statement.toLowerCase()
             var finalStatement = statement.charAt(0).toUpperCase() + statement.substr(1);
             $('#pre-title').innerHTML = finalStatement;
 
+            //For outcomes that provide more than a single film, randomize a selection in that array
 
             var rProcess = response[Math.floor(Math.random() * response.length)];
 
