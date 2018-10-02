@@ -8,7 +8,7 @@
 }
 
 .font-assistant{
-    font-family: 'Assistant', Sans;
+    font-family: 'Assistant', sans-serif;
 }
 
 h4 {
@@ -23,7 +23,7 @@ p {
 	margin-bottom: 30px;
   font: 18px/1.7 'Assistant', sans-serif;
   letter-spacing: 0.5px;
-	color: #2e2e2e;
+	color: #2e2e2e !important;
 }
 
 #question-title {
