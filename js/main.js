@@ -81,10 +81,10 @@ function nextPage(npage) {
             if (noFilm === true){
                 var movieTitle = "We couldn't find " + finalStatement.replace(/is.../g,'');
                 $('#pre-title').hidden = true;
-            } 
+            }
 
             else {
-            var movieTitle = response[0].name 
+            var movieTitle = response[0].name
             console.log(noFilm)}
 
             var movieDesc = response[0].description
@@ -105,7 +105,7 @@ function nextPage(npage) {
 
         } else if (response.length > 1) {
 
-            
+
 
             var statement =  (answers[0][0][0] === 'A' ? 'An '  : 'A ') + answers[0][0] + " Movie with " + (answers[2][0][0] === 'A' ? 'An '  : 'A ') + answers[2][0] + " " + answers[1][0] + " Lead is...";
             statement = statement.toLowerCase()
@@ -179,11 +179,6 @@ answerSection.addEventListener('click', function(event) {
     }
 
 });
-
-$("#tweetMessage").addEventListener('click', function() {
-    tweetMessage()
-})
-
 $("#tryAgain").addEventListener('click', function() {
     tryAgain()
 })

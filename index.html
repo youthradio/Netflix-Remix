@@ -15,13 +15,13 @@
 <body>
     <div class="container-fluid">
         <header class="row mt-2">
-            <div class="col-md-6 offset-md-3">
+            <div class="col-12">
                 <h5 id="question-title" class="text-center font-assistant set mt-2" style="color: #2E2E2E"></h5>
             </div>
         </header>
         <div id="pie-page" hidden>
             <article class="row">
-                <div class="col-lg-4 col-8 col-md-6 mx-auto">
+                <div class="col-8 col-md-4 mx-auto">
                     <div class="svg-container pie">
                         <svg preserveAspectRatio="xMinYMin meet" class="svg-content" viewBox="0 0 349 348" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
@@ -87,7 +87,7 @@
                 </div>
             </article>
             <div class="row mb-2">
-                <div class="col-md-6 offset-md-3">
+                <div class="col-10 mx-auto">
                     <p class="text-center font-assistant mt-2" style="color: #2E2E2E" id="fun-fact">Did you know...<span class="" id="fun-fact-text"></span></p>
                 </div>
             </div>
@@ -95,30 +95,30 @@
         <div id="results-page" hidden>
             <div class="row">
                 <div class="col-12 ">
-                    <h5 id="pre-title" class="text-center font-roboto font-weight-bold"></h5>
-                    <h1 id="title" class="text-center font-dSans font-weight-bold"></h1>
+                    <h4 id="pre-title" class="text-center font-roboto font-weight-bold"></h4>
+                    <h5 id="title" class="text-center font-weight-bold"></h5>
                 </div>
-                <div class="col-12">
+                <div class="col-10 mx-auto result-box">
                     <div id="yt-video" class="embed-responsive embed-responsive-16by9">
                         <iframe id="video-url" class="embed-responsive-item" src="" allow="autoplay; encrypted-media" allowfullscreen></iframe>
                     </div>
                     <div hidden class="text-center" id="react-img">
+                      <div class="embed-responsive embed-responsive-16by9">
                         <video width="100%" autoplay muted playsinline loop>
                             <source src="https://media.giphy.com/media/jPAdK8Nfzzwt2/giphy.mp4" type="video/mp4">
                             Your browser does not support the video tag
                         </video>
+                      </div>
                     </div>
                 </div>
-                <div class="col-12 pt-2">
-                    <p id="pre-desc" class="font-weight-bold"><span id="mYear"></span>, Starring: <span id="mActors"></span></p>
-                    <p id="description-1" class="text-left font-assistant"></p>
-                    <p id="description-2" class="text-left font-assistant"></p>
+                <div class="col-10 mx-auto mt-2">
+                    <p id="pre-desc" class="font-weight-bold"><span id="mYear"></span> Starring: <span id="mActors"></span></p>
+                    <p id="description-1" class="font-assistant"></p>
+                    <p id="description-2" class="font-assistant"></p>
                 </div>
             </div>
         </div>
-        <div id="options" class="d-flex align-items-center pl-3 pb-2" hidden>
-            <span class="icon-facebook-inverted share-icon m-1 pointer" id="facebookThis"> </span>
-            <span class="icon-twitter-inverted share-icon m-1 pointer" id="tweetMessage"> </span>
+        <div id="options" class="d-flex align-items-center" hidden>
             <div class="ml-auto align-middle pointer d-flex align-items-center pr-2" id="tryAgain">
                 <span>Try Again</span>
                 <div class="ml-2 icon-arrow-right pulse">
