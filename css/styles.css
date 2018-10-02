@@ -221,10 +221,3 @@ li:nth-child(3) .text {
 [hidden]{
   display:none !important;
 }
-
-.result-box{
-	box-shadow: 5px 5px black;
-	border-radius: 5px;
-	border: 2px solid;
-	padding: 1%;
-}
