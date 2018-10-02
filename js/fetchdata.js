@@ -6,10 +6,12 @@ fetchData = async () => {
     data.forEach(e => {
       const options = []
       for(let i=0; i <3; i++){
-        options.push({
-          label: e[`Option-${i+1}`],
-          url: e[`Image-${i+1}`]
-        })
+        if(e[`Option-${i+1}`] !== ""){
+          options.push({
+            label: e[`Option-${i+1}`],
+            url: e[`Image-${i+1}`]
+          })
+        }
       }
       dataPack.push({
         question: e.Question,

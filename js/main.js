@@ -11,7 +11,9 @@ var noFilm = false;
 //Functions
 
 function nextPage(npage) {
-
+    while (answerSection.firstChild) {
+      answerSection.removeChild(answerSection.firstChild);
+    }
     if (currentPage < dataPack.length) {
         //checks if the current page's number isn't succeeding of the package's array count
 
@@ -19,16 +21,26 @@ function nextPage(npage) {
         questionTitle.innerHTML = dataPack[npage].question;
 
         dataPack[npage].options.forEach(function(obj, index) {
-            var buttonText = document.querySelector('button')
-            var opt = document.querySelector('#opt-' + (index + 1))
-            var image = document.querySelector(`#img-${index + 1} image`)
-
-
-            image.setAttribute('xlink:href', obj.url)
-            opt.dataset.key = obj.label
-            opt.innerHTML = obj.label
-
-
+            var button = document.createElement('button')
+            // var opt = document.querySelector('#opt-' + (index + 1))
+            // var image = document.querySelector(`#img-${index + 1} image`)
+            //
+            //
+            // image.setAttribute('xlink:href', obj.url)
+            // opt.dataset.key = obj.label
+            button.dataset.key = obj.label
+            button.innerHTML = obj.label
+            button.addEventListener('click', event => {
+              if (event.target.dataset.key) {
+                  console.log(event.target)
+                  answers.push([event.target.dataset.key, event.target.innerHTML])
+                  currentPage++
+                  nextPage(currentPage)
+                  console.log(currentPage)
+                  console.log(answers)
+              }
+            })
+            answerSection.appendChild(button)
         });
 
         var fF = document.querySelector('#fun-fact-text')
@@ -138,13 +150,6 @@ function nextPage(npage) {
     }
 };
 
-function tweetMessage(msg) {
-    const url = 'insert url'
-    const tweet = `#TeensVsNetflix: via @youthradio ${url}`
-    const tweetUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweet)}`
-    window.open(tweetUrl, 'pop', 'width=600, height=400, scrollbars=no')
-}
-
 function tryAgain() {
     currentPage = 0;
     answers = [];
@@ -166,19 +171,6 @@ function tryAgain() {
 
 };
 
-//Events
-
-answerSection.addEventListener('click', function(event) {
-    if (event.target.dataset.key) {
-        console.log(event.target)
-        answers.push([event.target.dataset.key, event.target.innerHTML])
-        currentPage++
-        nextPage(currentPage)
-        console.log(currentPage)
-        console.log(answers)
-    }
-
-});
 $("#tryAgain").addEventListener('click', function() {
     tryAgain()
 })

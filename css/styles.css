@@ -59,14 +59,9 @@ p {
 tspan {
   text-shadow: 0px 3px 4px #000;
 }
-
-/* .pie {
-  width: 50vh;
-  height: 50vh;
-  background-color: white;
-  border-radius: 100%;
+.pie {
   overflow: hidden;
-} */
+}
 /*
 .pie {
     margin: 1em auto;
@@ -81,7 +76,6 @@ tspan {
 .svg-label {
   cursor: pointer;
   padding: 15px;
-  fill: white;
 }
 
 .box{
@@ -155,10 +149,6 @@ tspan {
 }
 .projecttitle {
   background:black;
-}
-.font{
-  font-family: Alegreya Sans;
-  font-style: bold;
 }
 
 li {
