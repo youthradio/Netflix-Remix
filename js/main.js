@@ -184,7 +184,7 @@ $("#tryAgain").addEventListener('click', function() {
 })
 
 window.addEventListener('DOMContentLoaded', function() {
-  const elementRoot = $('body')
+  const elementRoot = $('html')
     const resizeObserver = new ResizeObserver(entries => {
       for (const entry of entries) {
         const { height } = entry.contentRect;
