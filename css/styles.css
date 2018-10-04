@@ -38,9 +38,9 @@ h4 {
 }
 
 h5 {
-  font: 700 1rem 'Roboto Mono', sans-serif;
+  font: 700 1.2rem 'Roboto Mono', sans-serif;
   text-transform: uppercase;
-  letter-spacing: 2.14px;
+  letter-spacing: calc(1rem/8);
 }
 
 p {
