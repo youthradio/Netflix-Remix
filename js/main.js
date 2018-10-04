@@ -29,7 +29,7 @@ function nextPage(npage) {
             //
             // image.setAttribute('xlink:href', obj.url)
             // opt.dataset.key = obj.label
-            button.classList.add('button-style','m-4')
+            button.classList.add('button-style','m-4', 'text-uppercase', 'font-weight-bold')
             button.dataset.key = obj.label
             button.innerHTML = obj.label
             button.addEventListener('click', event => {
