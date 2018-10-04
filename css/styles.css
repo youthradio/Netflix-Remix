@@ -221,3 +221,21 @@ li:nth-child(3) .text {
 [hidden]{
   display:none !important;
 }
+
+.option{
+background-color: #fff;
+border: 8px solid #2e2e2e;
+border-radius: 20px;
+padding: 1rem 2rem;
+font-size: 30px;
+font-family: 'Montserrat', sans-serif;
+box-shadow: 20px 20px #00cec3;
+}
+
+.option:hover{
+color: #fff;
+background-color: #00cec3;
+box-shadow: 10px 10px #232323;
+font-weight:600;
+
+}
