@@ -222,7 +222,7 @@ li:nth-child(3) .text {
   display:none !important;
 }
 
-.yrBtn{
+.button-style{
 background-color: #fff;
 border: 8px solid #2e2e2e;
 border-radius: 20px;
@@ -232,7 +232,7 @@ font-family: 'Montserrat', sans-serif;
 box-shadow: 20px 20px #00cec3;
 }
 
-.yrBtn:hover{
+.button-style:hover{
 color: #fff;
 background-color: #00cec3;
 box-shadow: 10px 10px #232323;
