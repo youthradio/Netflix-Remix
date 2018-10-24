@@ -2,7 +2,7 @@ let dataPack = []
 let moviesData = []
 
 fetchData = async () => {
-  await d3.csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTTF_OzbI0GYTeLSwYte5EuE_Ooaf6EE0kiXCJKgyJaTEmGzk05WMNDPZ-se-dvB5AWjpTglJ5o_Hy1/pub?gid=2045843988&single=true&output=csv').then(data => {
+  await d3.csv('data/questions.csv').then(data => {
     data.forEach(e => {
       const options = []
       for(let i=0; i <3; i++){
@@ -26,7 +26,7 @@ fetchData = async () => {
   })
 
 
-  return d3.csv('https://docs.google.com/spreadsheets/d/e/2PACX-1vTTF_OzbI0GYTeLSwYte5EuE_Ooaf6EE0kiXCJKgyJaTEmGzk05WMNDPZ-se-dvB5AWjpTglJ5o_Hy1/pub?gid=0&single=true&output=csv').then(data => {
+  return d3.csv('data/movies.csv').then(data => {
       data.forEach(m => {
         moviesData.push({
             name: m.Movie_Name,
